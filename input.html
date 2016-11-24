@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+     <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .box {
+            width: 260px;
+            margin: 200px auto;
+        }
+        #leftImg {
+            float: left;
+            width: 200px;
+            padding-left: 16px;
+            height: 40px;
+            background: url("../images/left.jpg") no-repeat;
+            border: 0;
+            outline-style: none;
+            color: #ccc;
+        }
+        #rightImg {
+            float: left;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <input id="leftImg" value="请输入..."/>
+    <img id="rightImg" src="../images/right.jpg"/>
+</div>
+<script type="text/javascript">
+    var a=document.getElementById("leftImg");
+    a.onfocus=function(){
+        a.value="";
+        a.style.color="black";
+    }
+    a.onblur=function(){
+        if(a.value==""){
+            a.value="请输入...";
+            a.style.color="#ccc";
+        }
+        else{
+            
+        }
+    }
+</script>
+    </body>
+</html>
